@@ -1,0 +1,253 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+/* General setup */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size:16px;
+}
+
+body {
+    margin: 1.5rem auto;
+    width:90%;
+}
+
+/* Imported Typfaces */
+
+@font-face {
+		font-family:Josefinslab;
+		src: url(../fonts/serif/josefinslab-regular.ttf) format('truetype');
+		font-weight:normal;
+		font-style:normal;
+	}
+	
+	@font-face {
+		font-family:Ultra;
+		src: url(../fonts/serif/ultra-regular.ttf) format('truetype');
+		font-weight:normal;
+		font-style:normal;
+	}
+	
+	@font-face {
+		font-family:Montserrat;
+		src: url(../fonts/sans-serif/montserrat-regular.ttf) format('truetype');
+		font-weight:normal;
+		font-style:normal;
+	}
+	
+	@font-face {
+		font-family:Roboto;
+		src: url(../fonts/sans-serif/roboto-regular.ttf) format('truetype');
+		font-weight:normal;
+		font-style:normal;
+	}
+
+/* Nav Bar */
+
+nav {
+	border-top: .125rem solid #33658A;
+	border-bottom: .125rem solid #33658A;
+	text-align:left;
+	word-spacing:3.75rem;
+	margin-top:2rem;
+	margin-bottom:2rem;
+}
+
+nav a {
+	text-decoration:none;
+	text-align:center;
+	font-size:1.5rem;
+	margin: 1rem 1rem 1rem 1rem;
+}
+
+nav a:focus,
+nav a:hover {
+	color:#000;
+	text-transform:uppercase rotate(4deg);
+	text-decoration:line-through;
+}
+
+nav a:active {
+	color:#FFF;
+	background-color:#000;
+}
+
+/* Layout */
+
+main {
+	display: grid;
+	grid-template-columns: 3fr, 1fr;
+	gap: 10px;
+	grid-auto-rows: minmax(100px, auto);
+}
+
+article {
+	max-width:70%;
+	grid-column: 1 / 2;
+}
+
+aside {
+	float:right;
+	border-left-style:bold;
+	border-left-color:#000;
+	max-height:50%;
+	grid-column:2 / 2;
+}
+
+figure {
+}
+
+.article-image {
+	float:left;
+	margin:auto 1rem;
+}
+
+section {
+	
+}
+
+.row-images {
+	size:75%;
+	background-color:#EDF1CA;
+	padding-bottom: 1rem;
+}
+
+.main-section {
+	display:flex
+	max-width:70%;
+}
+
+.subsection {
+	display:flex;
+	max-width:70%;
+}
+
+figure {
+	margin:.5rem .5rem 0 .5rem;
+}
+
+
+
+
+/* Typography Styles */
+
+html {
+	font-family: Roboto, Arial, sans-serif;
+	}
+	
+h1 {
+	font-family: Roboto, Arial, sans-serif;
+	letter-spacing:.125rem;
+	font-size:3.5rem;
+	margin:3rem;
+	text-align:center;
+	text-shadow:.09375rem .09375rem .09375rem #000;
+	transform:rotate(-7.5deg);
+	padding:3rem;
+}
+
+span {
+	font-family: Ultra, Garamond, serif;
+	letter-spacing:.75rem;
+	color:#FAFBE1;
+	background-color:#9C153A;
+	text-shadow:.09375rem .09375rem .09375rem #000;
+}
+
+h3 {
+	font-family: Roboto, Arial, sans-serif;
+	letter-spacing:.125rem;
+	font-size:1.75rem;
+	margin:1.125rem;
+	text-align:left;
+}
+
+
+figcaption {
+		font-size:1rem;
+		margin:.5rem .5rem .5rem .5rem;
+		background-color:#EDF1CA;
+	}
+
+button {
+		font-family:ultra;
+		font-size:1rem;
+		background-color:#2A408D;
+		color:white;
+		size:30px;
+		margin: 1rem 1rem 1rem 1rem;
+}
+
+/* Link Styling */
+
+	a {
+		outline:none;
+		text-decoration:none;
+	}
+
+	a:link,
+	a:visited {
+		color:#33658A;
+	}
+
+	a:focus,
+	a:hover {
+		text-decoration:none;
+	}
+
+/* Header and Footer */
+
+footer {
+float:bottom;
+}
